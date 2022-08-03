@@ -1,3 +1,4 @@
-FROM openjdk:11
-EXPOSE 8083
-ENTRYPOINT ["java","-jar","/devops.jar" ]
+FROM node:alpaline
+COPY . /app
+WORKDIR /app
+CMD node app.js
